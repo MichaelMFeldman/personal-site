@@ -5,9 +5,10 @@
 body {
   margin: 40px 0;
   font-family: 'Open Sans', 'sans-serif';
-  font-size: 1em;
   background-color: #fff;
   color: #444;
+/*  text-size-adjust: none; /* ??? */*/
+/*  -moz-text-size-adjust: none; /* ??? */*/
 }
 
 h1, p {
@@ -46,6 +47,13 @@ img {
 .main * {
   color: black;
   font-size: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    font-size: 150%;
+  .main * {
+    color: red;
+  }
 }
 
 .main p {
