@@ -1,0 +1,131 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px 0;
+  font-family: 'Open Sans', 'sans-serif';
+  background-color: #fff;
+  color: #444;
+}
+
+h1, p {
+  margin: 0 0 1em 0;
+}
+
+span.coordinate {
+  color: dimgray;
+}
+
+.icon-key {
+  display: flex;
+}
+
+.icon-key img {
+  margin-right: 10px;
+}
+
+.icon-key > img, .designations > img {
+  height: 20px;
+  width: 20px;
+}
+
+img {
+  padding: 0;
+}
+
+.main {
+  max-width: 940px;
+  margin: 0 auto;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main * {
+  color: black;
+  font-size: 100%;
+}
+
+.main p {
+  margin-left: 80px;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.row > * {
+  padding-bottom: 20px;
+}
+
+.row.header {
+  font-weight: bold;
+  margin: 30px 0 40px 0;
+}
+
+.row.header > * {
+  padding-bottom: 0;
+}
+
+.designations {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 60px;
+  padding-right: 20px;
+}
+
+.title {
+  width: 450px;
+  padding-left: 20px;
+}
+
+.tattoo {
+  width: 300px;
+}
+
+.series-grouping {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-bottom: 20px; /* An extra 10px since the last-child has 0 */
+}
+
+.series-grouping .series-description,
+.series-grouping .individual-description,
+.series-grouping .title {
+  border-left: 3px solid #e6e6e6;
+}
+
+.series-grouping .row:last-child * {
+  padding-bottom: 0;    /* Ensure the border doesn't extend past the text */
+}
+
+.series-description, .individual-description {
+  color: dimgray;
+  padding-left: 20px;
+  margin-left: 60px;
+  padding-bottom: 10px;
+}
+
+.series-description {
+  font-style: italic;
+}
+
+.individual-description {
+  font-size: 0.85em;
+}
+
+.row:has(+ .individual-description) > * {
+  padding-bottom: 5px;
+}
+
+/*          ???          */
+
+/*@supports (display: grid) {
+  .main > * {
+    width: auto;
+    margin: 0;
+  }
+}*/
