@@ -11,10 +11,6 @@ body {
 /*  -moz-text-size-adjust: none; /* ??? */*/
 }
 
-h1, p {
-  margin: 0 0 1em 0;
-}
-
 span.coordinate {
   color: dimgray;
 }
@@ -44,19 +40,20 @@ img {
   flex-direction: column;
 }
 
-.main * {
+.main p {
   color: black;
-  font-size: 100%;
+  font-size: 1em;
+  margin: 0;
 }
 
 @media only screen and (max-width: 600px) {
-    font-size: 150%;
-  .main * {
+  .main p {
+    font-size: 1.5em;
     color: red;
   }
 }
 
-.main p {
+.intro p {
   margin-left: 80px;
   margin-bottom: 10px;
 }
