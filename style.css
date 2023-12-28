@@ -9,6 +9,13 @@ body {
   color: #444;
 }
 
+.the-image-container {
+  position: relative;
+}
+
+.the-image-container img {
+  width: 100%;
+  height: auto;
 }
 
 .icon-key {
