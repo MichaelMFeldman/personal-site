@@ -7,12 +7,10 @@ body {
   font-family: 'Open Sans', 'sans-serif';
   background-color: #fff;
   color: #444;
-/*  text-size-adjust: none; /* ??? */*/
-/*  -moz-text-size-adjust: none; /* ??? */*/
 }
 
 span.coordinate {
-  color: dimgray;
+  color: #757575;
 }
 
 .icon-key {
@@ -32,6 +30,26 @@ img {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Taken from https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css */
+a[href^="http"]::after,
+a[href^="https://"]::after
+{
+  content: "";
+  width: 9px;
+  height: 9px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+
 .main {
   max-width: 940px;
   margin: 0 auto;
@@ -46,13 +64,6 @@ img {
   margin: 0;
 }
 
-@media only screen and (max-width: 600px) {
-  .main p {
-    font-size: 1.5em;
-    color: red;
-  }
-}
-
 .intro p {
   margin-left: 80px;
   margin-bottom: 10px;
@@ -63,7 +74,7 @@ img {
 }
 
 .row > * {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .row.header {
@@ -85,6 +96,7 @@ img {
 .title {
   width: 450px;
   padding-left: 20px;
+  padding-right: 10px;
 }
 
 .tattoo {
@@ -95,7 +107,7 @@ img {
   display: flex;
   flex-direction: column;
   padding: 0;
-  padding-bottom: 20px; /* An extra 10px since the last-child has 0 */
+  padding-bottom: 30px; /* An extra 10px since the last-child has 0 */
 }
 
 .series-grouping .series-description,
@@ -109,10 +121,10 @@ img {
 }
 
 .series-description, .individual-description {
-  color: dimgray;
+  color: #757575;
   padding-left: 20px;
   margin-left: 60px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .series-description {
@@ -124,14 +136,29 @@ img {
 }
 
 .row:has(+ .individual-description) > * {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
-/*          ???          */
-
-/*@supports (display: grid) {
-  .main > * {
-    width: auto;
-    margin: 0;
+@media only screen and (max-width: 600px) {
+  .main p {
+    font-size: 1.1em;
   }
-}*/
+
+  .intro p {
+    margin-left: 20px;
+  }
+
+  .series-description, .individual-description {
+    padding-left: 10px;
+    margin-left: 50px;
+  }
+
+  .designations {
+    min-width: 50px;
+    padding-right: 10px;
+  }
+
+  .title {
+    padding-left: 10px;
+  }
+}
